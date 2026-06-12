@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre de Formation · Mr Calamity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A56A4',
+            gold: '#C8A951',
+            bg: '#FAFAFA',
+            textMain: '#1E1E1E',
+            textLight: '#6B7280',
+            border: '#E5E7EB'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bg text-textMain antialiased flex flex-col min-h-screen">
+  
+  <header class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-bold text-xl text-primary flex items-center gap-3">
+        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"/></svg>
+        <span>Portfolio de Formation</span>
+      </div>
+      <nav>
+        <ul class="flex items-center gap-6 font-medium text-textLight">
+          <li><a href="index.html" class="hover:text-primary transition-colors">Accueil</a></li>
+          <li><a href="crmef.html" class="text-primary">Centre de Formation</a></li>
+          <li><a href="msp.html" class="hover:text-primary transition-colors">Stage (MSP)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Header Page -->
+    <section class="bg-primary text-white py-20 text-center px-6">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4 text-white">Formation Professionnelle</h1>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto">Dossier de formation théorique et didactique au Centre Régional des Métiers de l'Éducation et de la Formation (CRMEF Marrakech).</p>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-primary mb-6 relative inline-block">Aperçu de la Formation<span class="absolute bottom-[-8px] left-1/4 w-1/2 h-1 bg-gold rounded"></span></h2>
+        <p class="text-lg text-textLight mt-8 leading-relaxed max-w-3xl mx-auto">
+          La formation se focalise sur le développement de l'ingénierie de la formation, la compréhension du contexte d'enseignement et l'adoption d'un rôle actif de l'enseignant. Le cursus intègre à la fois le cadre théorique en didactique informatique, les sciences de l'éducation, et l'approche pratique.
+        </p>
+      </div>
+    </section>
+
+    <!-- Compétences Acquises -->
+    <section class="py-16 bg-bg px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary relative inline-block">Compétences Professionnelles<span class="absolute bottom-[-8px] left-1/4 w-1/2 h-1 bg-gold rounded"></span></h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-border text-center hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-3 text-textMain">Concevoir une Séance</h4>
+            <p class="text-textLight">Élaborer des fiches pédagogiques alignées aux orientations officielles et planifier les apprentissages.</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-border text-center hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-3 text-textMain">Gérer une Classe</h4>
+            <p class="text-textLight">Maintenir un climat de travail sain, gérer efficacement le temps, l'hétérogénéité et l'espace de la salle informatique.</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-sm border border-border text-center hover:-translate-y-1 hover:shadow-md transition-all">
+            <div class="w-16 h-16 bg-blue-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13.4a1.5 1.5 0 0 1 1.6 1.5 4.5 4.5 0 0 1-4.5 4.5H4"/><path d="M8 10v9"/><path d="M12 10v9"/><path d="M16 10v9"/><path d="M4 21h16a2 2 0 0 0 2-2"/></svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-3 text-textMain">Évaluer les Acquis</h4>
+            <p class="text-textLight">Construire des grilles d'évaluation formatives et sommatives pour mesurer l'atteinte des compétences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Étudiés -->
+    <section class="py-16 bg-white px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary relative inline-block">Modules Étudiés<span class="absolute bottom-[-8px] left-1/4 w-1/2 h-1 bg-gold rounded"></span></h2>
+          <p class="text-textLight mt-6">Découvrez le contenu et les rapports de chaque module validé au centre de formation.</p>
+        </div>
+        
+        <!-- Accordions -->
+        <div class="space-y-4" id="modules-accordion">
+          
+          <h3 class="text-xl font-bold text-gold mt-10 mb-4 border-b border-border pb-2">Semestre 1</h3>
+          
+          <!-- Module M01 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m01', 'icon-m01')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M01</span>
+                <span class="font-semibold text-textMain">Architecture des Systèmes Informatiques</span>
+              </div>
+              <svg id="icon-m01" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m01" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Composants matériels, algèbre de Boole, portes logiques, systèmes de numération.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M01_Architecture-SI.pdf', 'Architecture des Systèmes Informatiques')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- Module M02 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m02', 'icon-m02')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M02</span>
+                <span class="font-semibold text-textMain">Algorithmique, Python & Logiciels</span>
+              </div>
+              <svg id="icon-m02" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m02" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Algorithmique de base, programmation Python, logiciels bureautiques et bases de données.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M02_Algo-Python-Logiciels.pdf', 'Algorithmique, Python & Logiciels')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- Module M03 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m03', 'icon-m03')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M03</span>
+                <span class="font-semibold text-textMain">Sciences de l'Éducation</span>
+              </div>
+              <svg id="icon-m03" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m03" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Fondements théoriques des sciences de l'éducation et théories de l'apprentissage.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M03_Sciences-Education.pdf', 'Sciences de l\'Éducation')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- Module M04 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m04', 'icon-m04')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M04</span>
+                <span class="font-semibold text-textMain">Didactique de l'Informatique</span>
+              </div>
+              <svg id="icon-m04" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m04" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Transposition didactique des savoirs informatiques pour l'enseignement collégial.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M04_Didactique-Informatique.pdf', 'Didactique de l\'Informatique')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M05 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m05', 'icon-m05')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M05</span>
+                <span class="font-semibold text-textMain">Planification des Apprentissages</span>
+              </div>
+              <svg id="icon-m05" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m05" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Planification pédagogique à long, moyen et court terme. Élaboration de la fiche pédagogique.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/Rapport_Planification.pdf', 'Planification des Apprentissages')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M06 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m06', 'icon-m06')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M06</span>
+                <span class="font-semibold text-textMain">Gestion des Apprentissages 1</span>
+              </div>
+              <svg id="icon-m06" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m06" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Gestion de la classe, conduite de séances, différenciation pédagogique.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M06_Gestion-Apprentissages-1.pdf', 'Gestion des Apprentissages 1')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M07 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m07', 'icon-m07')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M07</span>
+                <span class="font-semibold text-textMain">Méthodologie de la Recherche</span>
+              </div>
+              <svg id="icon-m07" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m07" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Démarche scientifique appliquée à l'intervention pédagogique en contexte scolaire.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M07_Methodologie-Recherche.pdf', 'Méthodologie de la Recherche Interventionnelle')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M08 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m08', 'icon-m08')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M08</span>
+                <span class="font-semibold text-textMain">Apprentissage Numérique — TICE</span>
+              </div>
+              <svg id="icon-m08" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m08" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Intégration des technologies de l'information et de la communication dans l'enseignement.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M08_TICE.pdf', 'Apprentissage Numérique — TICE')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-bold text-gold mt-12 mb-4 border-b border-border pb-2">Semestre 2</h3>
+
+          <!-- M09 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m09', 'icon-m09')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M09</span>
+                <span class="font-semibold text-textMain">Réseaux Informatiques</span>
+              </div>
+              <svg id="icon-m09" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m09" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Architecture des réseaux locaux, protocoles, configuration et administration réseau.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M09_Reseaux.pdf', 'Réseaux Informatiques')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M10 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m10', 'icon-m10')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M10</span>
+                <span class="font-semibold text-textMain">Technologies et Développement Web</span>
+              </div>
+              <svg id="icon-m10" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m10" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> HTML5, CSS3, JavaScript — conception et développement de sites web statiques et dynamiques.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M10_Dev-Web.pdf', 'Technologies et Développement Web')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M11 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m11', 'icon-m11')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M11</span>
+                <span class="font-semibold text-textMain">Gestion des Apprentissages 2</span>
+              </div>
+              <svg id="icon-m11" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m11" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Approfondissement de la gestion pédagogique : remédiation, pédagogie différenciée, projets.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M11_Gestion-Apprentissages-2.pdf', 'Gestion des Apprentissages 2')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M12 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m12', 'icon-m12')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M12</span>
+                <span class="font-semibold text-textMain">Évaluation, Soutien et Remédiation</span>
+              </div>
+              <svg id="icon-m12" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m12" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Conception et mise en œuvre de l'évaluation diagnostique, formative et sommative.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M12_Evaluation.pdf', 'Évaluation, Soutien et Remédiation')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M13 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m13', 'icon-m13')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M13</span>
+                <span class="font-semibold text-textMain">Atelier de Production Didactique</span>
+              </div>
+              <svg id="icon-m13" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m13" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Conception de supports et ressources pédagogiques numériques et imprimés.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M13_Production-Didactique.pdf', 'Atelier de Production Didactique')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M14 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m14', 'icon-m14')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M14</span>
+                <span class="font-semibold text-textMain">Analyse de Pratiques Professionnelles</span>
+              </div>
+              <svg id="icon-m14" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m14" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Réflexion critique sur les pratiques enseignantes à partir d'observations de terrain.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M14_Analyse-Pratiques.pdf', 'Atelier d\'Analyse de Pratiques Professionnelles')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M15 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m15', 'icon-m15')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M15</span>
+                <span class="font-semibold text-textMain">Vie Scolaire</span>
+              </div>
+              <svg id="icon-m15" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m15" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Organisation scolaire, droits et devoirs, relation école-famille-communauté.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M15_Vie-Scolaire.pdf', 'Vie Scolaire')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+          <!-- M16 -->
+          <div class="border border-border rounded-lg overflow-hidden bg-bg">
+            <button class="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 focus:outline-none transition-colors" onclick="toggleAccordion('content-m16', 'icon-m16')">
+              <div class="flex items-center gap-4 text-left">
+                <span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded text-sm">M16</span>
+                <span class="font-semibold text-textMain">Éthique de la Profession</span>
+              </div>
+              <svg id="icon-m16" class="w-5 h-5 text-gray-500 transition-transform transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="content-m16" class="hidden px-6 py-5 bg-white border-t border-border">
+              <p class="text-textLight mb-4"><strong>Contenu :</strong> Déontologie enseignante, valeurs professionnelles et responsabilités institutionnelles.</p>
+              <button class="inline-flex items-center justify-center bg-primary text-white px-5 py-2.5 rounded font-medium hover:bg-opacity-90 transition-colors" onclick="openModal('pdfs/modules/M16_Ethique.pdf', 'Éthique de la Profession')">Consulter le Rapport</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t-2 border-gold py-6 px-6 lg:px-8 mt-auto">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textLight">
+      <div class="font-medium text-textMain">&copy; 2026 Mr Calamity</div>
+      <div class="text-center md:text-left">CRMEF de Marrakech — Promotion 2026</div>
+    </div>
+  </footer>
+
+  <!-- MODAL PDF -->
+  <div id="modal-overlay">
+    <div id="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <div class="modal-actions">
+          <a id="modal-new-tab" href="#" target="_blank" class="text-primary hover:underline font-medium text-sm mr-4" title="Ouvrir dans un nouvel onglet si l'aperçu est bloqué">
+            Ouvrir dans un nouvel onglet
+          </a>
+          <a id="modal-download" href="#" class="btn-primary" download>
+            <span>Télécharger</span>
+          </a>
+          <button id="modal-close" class="bg-transparent border-none text-2xl text-textLight hover:text-textMain cursor-pointer">&times;</button>
+        </div>
+      </div>
+      <object id="modal-object" data="" type="application/pdf" class="w-full flex-grow border-0 h-[calc(100%-60px)]">
+        <div class="flex flex-col items-center justify-center p-8 text-center h-full bg-gray-50 text-textMain">
+          <p class="mb-4 text-gray-600">L'aperçu du PDF n'est pas supporté ou est bloqué par votre navigateur.</p>
+          <a id="modal-fallback-link" href="#" target="_blank" class="btn-primary">
+            Ouvrir le document dans un nouvel onglet
+          </a>
+        </div>
+      </object>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(contentId, iconId) {
+      const content = document.getElementById(contentId);
+      const icon = document.getElementById(iconId);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

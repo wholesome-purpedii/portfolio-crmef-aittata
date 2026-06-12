@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mise en Situation Professionnelle · Mr Calamity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A56A4',
+            gold: '#C8A951',
+            bg: '#FAFAFA',
+            textMain: '#1E1E1E',
+            textLight: '#6B7280',
+            border: '#E5E7EB',
+            secondary: '#2C3E50'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-bg text-textMain antialiased flex flex-col min-h-screen">
+  
+  <header class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-bold text-xl text-primary flex items-center gap-3">
+        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"/></svg>
+        <span>Portfolio de Formation</span>
+      </div>
+      <nav>
+        <ul class="flex items-center gap-6 font-medium text-textLight">
+          <li><a href="index.html" class="hover:text-primary transition-colors">Accueil</a></li>
+          <li><a href="crmef.html" class="hover:text-primary transition-colors">Centre de Formation</a></li>
+          <li><a href="msp.html" class="text-primary">Stage (MSP)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Header Page -->
+    <section class="bg-secondary text-white py-20 text-center px-6">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4 text-white">Dossier de Stage Pédagogique</h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">Mise en situation professionnelle et pratique (MSP) dans un établissement d'accueil.</p>
+      </div>
+    </section>
+
+    <!-- Établissement d'accueil -->
+    <section class="py-16 bg-white px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold text-primary relative inline-block">Établissement d'Accueil<span class="absolute bottom-[-8px] left-1/4 w-1/2 h-1 bg-gold rounded"></span></h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-8 bg-white border border-border rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-primary p-12 text-white flex flex-col justify-center">
+            <h3 class="text-3xl font-bold text-white mb-4">Lycée Collégial Ben Toumert</h3>
+            <p class="text-blue-100 mb-2 font-medium">Circonscription : Guéliz</p>
+            <p class="text-blue-100 flex items-center gap-2">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Marrakech, Maroc
+            </p>
+          </div>
+          <div class="p-10 grid grid-cols-2 gap-8 bg-gray-50">
+            <div class="flex flex-col items-center justify-center text-center p-4 bg-white rounded-lg shadow-sm">
+              <div class="text-4xl font-bold text-primary mb-2">1</div>
+              <p class="font-semibold text-textMain">Salle Multimédia</p>
+            </div>
+            <div class="flex flex-col items-center justify-center text-center p-4 bg-white rounded-lg shadow-sm">
+              <div class="text-4xl font-bold text-primary mb-2">20</div>
+              <p class="font-semibold text-textMain">Postes Informatiques</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table des séances -->
+    <section class="py-16 bg-bg px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-primary relative inline-block">Registre des Séances et Rapports<span class="absolute bottom-[-8px] left-1/4 w-1/2 h-1 bg-gold rounded"></span></h2>
+          <p class="text-textLight mt-6 max-w-2xl mx-auto">Les différentes étapes de mon stage de pratique, observations, co-animations et animations de séances.</p>
+        </div>
+
+        <div class="overflow-x-auto bg-white rounded-xl shadow-sm border border-border">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gray-100 border-b border-border text-textMain">
+                <th class="p-4 font-bold">Jours de Stage</th>
+                <th class="p-4 font-bold">Thème de la Séance</th>
+                <th class="p-4 font-bold">Niveau</th>
+                <th class="p-4 font-bold text-center">Rapports PDF</th>
+              </tr>
+            </thead>
+            <tbody class="text-textLight divide-y divide-border">
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 01</td>
+                <td class="p-4">Observation générale de la classe et de l'établissement</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour01.pdf', 'Rapport MSP — Jour 01')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 02</td>
+                <td class="p-4">Observation d'une séance d'informatique (niveau 2AC)</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour02.pdf', 'Rapport MSP — Jour 02')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 03</td>
+                <td class="p-4">Prise en main d'un groupe — présentation et diagnostic</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour03.pdf', 'Rapport MSP — Jour 03')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 04</td>
+                <td class="p-4">Animation d'une séance sur le tableur (MS Excel)</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour04.pdf', 'Rapport MSP — Jour 04')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 05</td>
+                <td class="p-4">Gestion de classe et différenciation pédagogique</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour05.pdf', 'Rapport MSP — Jour 05')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 06</td>
+                <td class="p-4">Évaluation formative en pratique</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour06.pdf', 'Rapport MSP — Jour 06')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 07</td>
+                <td class="p-4">Remédiation et soutien individualisé</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour07.pdf', 'Rapport MSP — Jour 07')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 08</td>
+                <td class="p-4">Utilisation des TICE en classe</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour08.pdf', 'Rapport MSP — Jour 08')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 09</td>
+                <td class="p-4">Conduite autonome d'une séance complète</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour09.pdf', 'Rapport MSP — Jour 09')">Consulter &rarr;</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="p-4 border-l-4 border-l-primary font-bold text-primary">Jour 10</td>
+                <td class="p-4">Bilan de stage et réflexion professionnelle</td>
+                <td class="p-4">[À compléter]</td>
+                <td class="p-4 text-center">
+                  <button class="bg-blue-50 text-primary py-2 px-4 rounded font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap" onclick="openModal('pdfs/msp/Jour10.pdf', 'Rapport MSP — Jour 10')">Consulter &rarr;</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t-2 border-gold py-6 px-6 lg:px-8 mt-auto">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textLight">
+      <div class="font-medium text-textMain">&copy; 2026 Mr Calamity</div>
+      <div class="text-center md:text-left">CRMEF de Marrakech — Promotion 2026</div>
+    </div>
+  </footer>
+
+  <!-- MODAL PDF -->
+  <div id="modal-overlay">
+    <div id="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <div class="modal-actions">
+          <a id="modal-new-tab" href="#" target="_blank" class="text-primary hover:underline font-medium text-sm mr-4" title="Ouvrir dans un nouvel onglet si l'aperçu est bloqué">
+            Ouvrir dans un nouvel onglet
+          </a>
+          <a id="modal-download" href="#" class="btn-primary" download>
+            <span>Télécharger</span>
+          </a>
+          <button id="modal-close" class="bg-transparent border-none text-2xl text-textLight hover:text-textMain cursor-pointer">&times;</button>
+        </div>
+      </div>
+      <object id="modal-object" data="" type="application/pdf" class="w-full flex-grow border-0 h-[calc(100%-60px)]">
+        <div class="flex flex-col items-center justify-center p-8 text-center h-full bg-gray-50 text-textMain">
+          <p class="mb-4 text-gray-600">L'aperçu du PDF n'est pas supporté ou est bloqué par votre navigateur.</p>
+          <a id="modal-fallback-link" href="#" target="_blank" class="btn-primary">
+            Ouvrir le document dans un nouvel onglet
+          </a>
+        </div>
+      </object>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
